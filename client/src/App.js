@@ -5,45 +5,46 @@ import ShopPage from './pages/Shop';
 import NavBar from './components/NavBar'
 import { Constructor } from '@babel/types';
 import {useState} from "react";
+
  //this should call the api
-Constructor(props) {
-  super(props);
-  this.state = {
-    items:[],
-    isLoaded: false,
-  }
+//Constructor(props) {
+ // super(props);
+  //this.state = {
+  //  items:[],
+//    isLoaded: false,
+ // }
+//
+//}
 
-}
+//componentDidMount() {
+//  fetch('')
+  //.then(res => res.json())
+ // .then(json => {
+  //  this.setState({
+  //    isLoaded:true,
+  //    items: json,
+ // })
+ //})
+//}
+//render(){
+ // const { isLoaded } = this.state;
+//
+  //if (!isLoaded){
+   // return(
+     // <div classname ="App">
+       // <ul>
+       //   {items.map(item =>(
+          //  <li key = {item.id}>
+            // name: {item.name} 
+          //   type: {item.type}|
 
-componentDidMount() {
-  fetch('https://rescuegroups.org/manage/public_apikey_edit?ak=Kj0RT2J0&t=HBMa7f573cqrRTp')
-  .then(res => res.json())
-  .then(json => {
-    this.setState({
-      isLoaded:true,
-      items: json,
-  })
- })
-}
-render(){
-  const { isLoaded } = this.state;
-
-  if (!isLoaded){
-    return(
-      <div classname ="App">
-        <ul>
-          {items.map(item =>(
-            <li key = {item.id}>
-             name: {item.name} 
-             type: {item.type}|
-
-            </li>
-          ))};
-        </ul>
-      </div>
-    );
-  }
-}
+           // </li>
+          //))};
+       // </ul>
+     // </div>
+  //  );
+ //}
+//}
 
 //it ends here
 
