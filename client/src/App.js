@@ -8,60 +8,6 @@ import {useState, useEffect} from 'react';
 import {getInfo} from './util/API';
 
 
-function App() {
-  useEffect(() => {
-    getInfo().then((data) =>{
-      console.log(data);
-    });
-  },[]);
-
-  const [text,setText]= useState("Hello World");
-  
-
- //this should call the api
-//Constructor(props) {
- // super(props);
-  //this.state = {
-  //  items:[],
-//    isLoaded: false,
- // }
-//
-//}
-
-//componentDidMount() {
-//  fetch('')
-  //.then(res => res.json())
- // .then(json => {
-  //  this.setState({
-  //    isLoaded:true,
-  //    items: json,
- // })
- //})
-//}
-//render(){
- // const { isLoaded } = this.state;
-//
-  //if (!isLoaded){
-   // return(
-     // <div classname ="App">
-       // <ul>
-       //   {items.map(item =>(
-          //  <li key = {item.id}>
-            // name: {item.name} 
-          //   type: {item.type}|
-
-           // </li>
-          //))};
-       // </ul>
-     // </div>
-  //  );
- //}
-//}
-
-//it ends here
-
-
-
 const client = new ApolloClient({
   uri: "/graphql",
   cache: InMemoryCache
@@ -85,6 +31,13 @@ const dummy = [
 ]
 
 function App() {
+  useEffect(() => {});
+    getInfo().then((data) =>{
+      console.log(data);
+    });
+  
+  const [text,setText]= useState("Hello World");
+
   return (
     //provider for apolloclient for graphql
     <ApolloProvider client={client}>
@@ -97,6 +50,7 @@ function App() {
       </Router>
     </ApolloProvider>
   );
-}
-
+  
+  }
+  
 export default App;
