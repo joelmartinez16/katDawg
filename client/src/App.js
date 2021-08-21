@@ -3,8 +3,20 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import HomePage from './pages/Home';
 import ShopPage from './pages/Shop';
 import NavBar from './components/NavBar'
-import { Constructor } from '@babel/types';
-import {useState} from "react";
+//import { Constructor } from '@babel/types';
+import {useState, useEffect} from 'react';
+import {getInfo} from './util/API';
+
+
+function App() {
+  useEffect(() => {
+    getInfo().then((data) =>{
+      console.log(data);
+    });
+  },[]);
+
+  const [text,setText]= useState("Hello World");
+  
 
  //this should call the api
 //Constructor(props) {
