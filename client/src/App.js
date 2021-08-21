@@ -4,6 +4,7 @@ import HomePage from './pages/Home';
 import ShopPage from './pages/Shop';
 import NavBar from './components/NavBar'
 import { Constructor } from '@babel/types';
+import {useState} from "react";
  //this should call the api
 Constructor(props) {
   super(props);
