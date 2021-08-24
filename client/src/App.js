@@ -4,6 +4,10 @@ import HomePage from './pages/Home';
 import ShopPage from './pages/Shop';
 import PetsPage from "./pages/AvailablePets";
 import NavBar from './components/NavBar'
+//import { Constructor } from '@babel/types';
+import {useState, useEffect} from 'react';
+import {getInfo} from './util/API';
+
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -44,6 +48,13 @@ const dummy2 = [
   },
 ]
 function App() {
+  useEffect(() => {});
+    getInfo().then((data) =>{
+      console.log(data);
+    });
+  
+  const [text,setText]= useState("Hello World");
+
   return (
     //provider for apolloclient for graphql
     <ApolloProvider client={client}>
@@ -57,6 +68,7 @@ function App() {
       </Router>
     </ApolloProvider>
   );
-}
-
+  
+  }
+  
 export default App;
