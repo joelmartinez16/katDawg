@@ -1,24 +1,74 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require("mongoose");  
+const bcrypt = require("bcrypt");
 
-const matchupSchema = new Schema({
-  tech1: {
-    type: String,
-    required: true,
-  },
-  tech2: {
-    type: String,
-    required: true,
-  },
-  tech1_votes: {
-    type: Number,
-    default: 0,
-  },
-  tech2_votes: {
-    type: Number,
-    default: 0,
-  },
-});
+const userSchema = new mongoose.Schema({ 
 
-const Matchup = model('Matchup', matchupSchema);
+  firstName:{ 
+    type: String, 
+    required: true , 
+    trim: true, 
+    min: 3, 
+    max:15
+  }, 
 
-module.exports = Matchup;
+  lastName:{ 
+    type: String, 
+    required: true , 
+    trim: true, 
+    min: 3, 
+    max:15
+  }, 
+
+  username:{ 
+    type:String, 
+    required:true, 
+    trim:true,
+    unique:true, 
+    index:true 
+
+  }, 
+
+  email:{ 
+    type:String, 
+    required:true, 
+    trim:true , 
+    unique:true 
+  }, 
+
+  hash_password:{ 
+    type:String, 
+    required:true
+  }, 
+
+  role:{ 
+    type:String, 
+    enum:["user","admin"], 
+    default:"admin"
+  }, 
+
+  contactNumber:{ 
+    type:String
+  }, 
+
+  profilePicture:{ 
+    type:String
+  }
+ 
+
+
+
+
+},{timestamps:true});  
+
+userSchema.virtual("password") 
+.set(function(password){ 
+  this.hash_password = bcrypt.hashSync(password,10)
+}) 
+
+userSchema.methods = { 
+  authenticate:function(password){ 
+    return bcrypt.compareSync(password,this.hash_password)
+  }
+}
+
+module.exports = mongoose.model("User",userSchema)

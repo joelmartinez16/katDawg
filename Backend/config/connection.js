@@ -7,7 +7,8 @@ const connectionDB = async () =>{
   try{ 
    await mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/katdawg_db",{ 
      useNewUrlParser: true, 
-     useUnifiedTopology:true
+     useUnifiedTopology:true, 
+     useCreateIndex:true 
    });
    
    console.log("MongoDB connection was succesfull!!!")
