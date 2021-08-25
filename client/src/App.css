@@ -39,20 +39,22 @@
 
 
 .card-grid {
-  display: "grid";
+  display: "column";
   
  
 }
 .grid--4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .grid__item {
-  flex-basis: 25%;
-  padding-left: 10px;
-  margin-bottom: 16px;
+  flex-basis: calc(25% - 10px);
+    margin-left: 10px;
+    margin-bottom: 16px;
+    justify-content: "center";
+    
+
 }
 
 
