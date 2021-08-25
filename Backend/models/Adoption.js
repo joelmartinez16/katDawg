@@ -32,6 +32,7 @@ const Adoption = model('Adoption', adoptionSchema);
 module.exports = Adoption;
 
 // We need to make sure that this works in order to push to main.
+/*
 const Adopt = new Schema({
   name: {type: String},
   adoptionSchema: [
@@ -41,3 +42,4 @@ const Adopt = new Schema({
     }
   ]
 })
+*/
