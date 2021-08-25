@@ -14,6 +14,11 @@ const productSchema = new mongoose.Schema({
         required:true
     }, 
 
+    age:{
+        type:Number,
+        required:true
+    },
+
     price:{ 
         type:Number, 
         required:true 
