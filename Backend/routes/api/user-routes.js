@@ -11,8 +11,8 @@ router.post('/signing',(req,res)=>{
 router.post('/signup',(req,res)=>{ 
 
         User.findOne({email:req.body.email}) 
-        .exce((err, user) =>{ 
-            if (err||!user) return res.status(400).json({ 
+        .exec((err, user) =>{ 
+            if (user) return res.status(400).json({ 
                 message:'Sorry User already registered !'
             }); 
 
@@ -32,7 +32,7 @@ router.post('/signup',(req,res)=>{
                     })
                 }if(data){ 
                     return res.status(201).json({ 
-                        user:data
+                        message:"User was Created"
                     })
                 }
             })
