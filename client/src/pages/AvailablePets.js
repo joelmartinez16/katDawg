@@ -1,5 +1,5 @@
 import Card from '../components/Card'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 const Pets = ({ AvailablePets }) => {
     //this is the shop page
