@@ -52,6 +52,9 @@ const userSchema = new mongoose.Schema({
 
   profilePicture:{ 
     type:String
+  },
+  zipCode:{
+    type:String
   }
  
 
