@@ -66,7 +66,10 @@ const userSchema = new mongoose.Schema({
 userSchema.virtual("password") 
 .set(function(password){ 
   this.hash_password = bcrypt.hashSync(password,10)
-}) 
+})  
+
+userSchema.virtual("fullName") 
+.get(function())
 
 userSchema.methods = { 
   authenticate:function(password){ 
