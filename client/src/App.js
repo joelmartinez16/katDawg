@@ -59,6 +59,7 @@ function App() {
   return (
     //provider for apolloclient for graphql
     <ApolloProvider client={client}>
+     
       <Router>
         <NavBar />
         <Switch>
@@ -67,6 +68,7 @@ function App() {
           <Route path="/availablePets" exact component={()=> <PetsPage AvailablePets={dummy}/>} />
         </Switch>
       </Router>
+    
       <Footer/>
     </ApolloProvider>
   );

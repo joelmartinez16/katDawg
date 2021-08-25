@@ -1,4 +1,9 @@
+// import { Link } from 'react-router-dom';
+import React from 'react';
+
+
 const NavBar = () => {
+    
     return <>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -8,7 +13,7 @@ const NavBar = () => {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarColor02">
-                    <ul className="navbar-nav me-auto">
+                    <ul className="navbar-nav me-auto" >
                         <li className="nav-item">
                             <a className="nav-link active" href="/Home">Home
                                 <span className="visually-hidden">(current)</span>
@@ -25,12 +30,11 @@ const NavBar = () => {
                         </li>
 
                     </ul>
-                    <form className="d-flex">
-                        <input className="form-control me-sm-2" type="text" placeholder="Search" />
-                        <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                    <button type="button" class="btn btn-outline-primary"><a href ="/Login">Login</a></button>
+                    <button type="button" class="btn btn-outline-light">Signup</button>
                 </div>
             </div>
+            
         </nav>
     </>
 }

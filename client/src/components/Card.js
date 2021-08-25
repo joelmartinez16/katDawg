@@ -1,7 +1,8 @@
-const Card = ({ border, header, secondary, size = 20 }) => {
+const Card = ({ border, header, secondary, size = 40 }) => {
 
     return <> <div>
-        <div className="card-grid grid--4 grid__item grid-container" >
+     
+        {/* <div className="card-grid"> */}
             <div className={`card border-${border} mb-3`} style={{ maxWidth: `${size}rem`, display: "inline-block" }}>
                 <div className="card-header">{header}</div>
                 <div className="card-body">
@@ -19,7 +20,7 @@ const Card = ({ border, header, secondary, size = 20 }) => {
                 </div>
             </div>
         </div>
-    </div>
+    {/* </div> */}
     </>
 }
 export default Card
