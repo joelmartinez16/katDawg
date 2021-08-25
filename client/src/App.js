@@ -32,22 +32,22 @@ const dummy = [
   },
 ]
 
-// const dummy2 = [
-//   {
-//     border: "primary",
-//     header: "Husky",
-//     size: 30
-//   },
-//   {
-//     border: "info",
-//     header: "Puppy"
-//   },
-//   {
-//     border: "danger",
-//     header: "Bulldog",
-//     size: 12
-//   },
-// ]
+const shopping = [
+  {
+    border: "primary",
+    header: "Adoption basket",
+    size: 30
+  },
+  {
+    border: "info",
+    header: "Adoption kit"
+  },
+  {
+    border: "danger",
+    header: "Ultimate Adoption kit",
+    size: 12
+  },
+]
 function App() {
   useEffect(() => {});
     getInfo().then((data) =>{
@@ -62,8 +62,8 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/shop" exact component={()=> <ShopPage shopItems={dummy.data}/>} />
+          <Route path="/Home" exact component={HomePage} />
+          <Route path="/shop" exact component={()=> <ShopPage shopItems={shopping}/>} />
           <Route path="/availablePets" exact component={()=> <PetsPage AvailablePets={dummy}/>} />
         </Switch>
       </Router>

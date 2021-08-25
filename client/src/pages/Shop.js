@@ -1,4 +1,5 @@
 import Card from '../components/Card'
+
 const Shop = ({ shopItems }) => {
     //this is the shop page
     return <>
