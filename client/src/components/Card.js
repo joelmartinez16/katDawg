@@ -1,6 +1,6 @@
 const Card = ({ border, header, secondary, size = 40 }) => {
 
-    
+    return <> <div>
      
         {/* <div className="card-grid"> */}
             <div className={`card border-${border} mb-3 `} style={{ maxWidth: `${size}rem`, display: "flex " }}>
