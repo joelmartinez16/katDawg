@@ -6,7 +6,7 @@ const HomePage = () => {
         <h1>Kat Dawg 🐾 Pet Adoption</h1>
         <img src="client/src/components/images/dog-and-cat.jpeg" alt="dog and cat" width="500" height="600">
         </img>
-            <button type="button" class="btn btn-secondary">Adopt Now</button>
+            <button type="button" className="btn btn-secondary">Adopt Now</button>
 
             <h2>Our Services</h2>
             <p>We provide an easy website for people looking to add a new pet into their family.

@@ -3,11 +3,12 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import HomePage from './pages/Home';
 import ShopPage from './pages/Shop';
 import PetsPage from "./pages/AvailablePets";
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import Footer from './components/Footer'
 //import { Constructor } from '@babel/types';
 import {useState, useEffect} from 'react';
 import {getInfo} from './util/API';
-
+import "./App.css"
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -65,6 +66,7 @@ function App() {
           <Route path="/shop" exact component={()=> <ShopPage shopItems={dummy}/>} />
           <Route path="/availablePets" exact component={()=> <PetsPage AvailablePets={dummy2}/>} />
         </Switch>
+        <Footer/>
       </Router>
     </ApolloProvider>
   );
