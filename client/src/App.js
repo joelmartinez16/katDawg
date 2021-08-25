@@ -66,8 +66,8 @@ function App() {
           <Route path="/shop" exact component={()=> <ShopPage shopItems={dummy}/>} />
           <Route path="/availablePets" exact component={()=> <PetsPage AvailablePets={dummy2}/>} />
         </Switch>
-        <Footer/>
       </Router>
+      <Footer/>
     </ApolloProvider>
   );
   

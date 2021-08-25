@@ -57,7 +57,10 @@
 
 }
 
-
+.grid-container {
+  display: grid;
+  grid-row-gap: 50px;
+}
 /* .footer-color{
   background-color: black;
 } */

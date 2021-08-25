@@ -24,7 +24,7 @@ const cartPage = () => {
         <input>ENTER COUPON CODE</input>
         <h3>Subtotal</h3>
         <h3>Shipping</h3>
-        <h3>Taxes</h4>
+        <h3>Taxes</h3>
          <h2>Total</h2>
     </div>
 
