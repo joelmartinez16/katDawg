@@ -32,7 +32,7 @@ const SignupForm = () => {
 
     try {
       const {data} = await addUser({
-        variables: {...userFormData},
+        variables: {username: 'asdlkfje', email: 'sdlfkjwe', password: 'sldkjfwe'},
       });
       Auth.login(data.addUser.token);
     }catch (err) {

@@ -23,6 +23,11 @@ const resolvers = {
       );
       return vote;
     },
+    addUser: async (parent, {username, email, password}) => {
+      //do db stuff
+      console.log(username, email, password)
+      //once good return user obj
+    }
   },
 };
 
