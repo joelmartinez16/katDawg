@@ -5,11 +5,12 @@ const Home = () => {
     return <>
        
     <h1 class="homeH1">Kat Dawg 🐾 Pet Adoption</h1>
-       <img src="../client/public/images/dog-and-cat.jpeg" alt="dog and cat" class="imgPet"></img>
+       <img src="" alt="" ></img>
          
          <div class="container">
             <div class="center">
-              <button type="button" className="btn btn-secondary">Adopt Now</button>
+            <button type="button" class="btn btn-primary">
+            <a className="nav-link active" href="/AvailablePets">Adopt Now</a></button>
             </div>
           </div>
 

@@ -5,8 +5,8 @@ import React from 'react';
 const About  = () => {
     return <>
       
-      <h1> About 🐾</h1>
-        <img src="./client/src/components/images/dog-and-cat.jpeg" alt="dog and cat" width="500" height="600">
+      <h1 class="homeH1"> About 🐾</h1>
+        <img src="" alt="" width="" height="">
         </img>
         <p>About Us
     We are organization establishing roots in the adoption community to help unite good people and our furry friends together:
