@@ -46,7 +46,7 @@
   
 }
 
-/* .grid--4 {
+.grid--4 {
   display: "inline-grid";
   flex-wrap: "wrap";
 }
@@ -61,23 +61,23 @@
 
 } */
 
-/* .grid-container {
+.grid-container {
   display: "inline-flex";
   grid-row-gap: 50px;
   grid-row: 1 / 4;
   border: 1px black solid;
   flex-direction: 'row';
   
-} */
+}
 
-/* .container {
+.container {
   
   grid-row-gap: 20px;
   grid-row: 1 / 6;
   border: 1px black solid;
   flex-direction: 'wrap';
   
-} */
+}
 
 
 .footer {
