@@ -4,17 +4,10 @@
   "description": "",
   "main": "Backend/server.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "node server/server.js",
-    "develop": "concurrently \"cd Backend && npm run watch\" \"cd client && npm start\"",
-    "install": "cd Backend && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-=======
     "start": "node Backend/Backend.js",
     "develop": "concurrently \"cd Backend && npm run watch\" \"cd client && npm start\"",
     "install": "cd Backend && npm i && cd ../client && npm i",
     "seed": "cd Backend && npm run seed",
->>>>>>> 8284a9205449d471a8207365a545601888540127
     "build": "cd client && npm run build"
   },
   "author": "",
