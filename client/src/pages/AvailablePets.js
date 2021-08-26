@@ -15,7 +15,7 @@ const Pets = ({ AvailablePets }) => {
   //this is the shop page
   return (
     <div>
-      {/* <h1>Available Adoptees</h1> */}
+     <h1>Available Adoptees 🐾 </h1> 
       <ShopNav categories={categories} />
       <div className="card-grid grid--4 grid__item grid-container">
         {AvailablePets.map((data) => (

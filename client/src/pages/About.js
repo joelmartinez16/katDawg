@@ -6,7 +6,7 @@ const About  = () => {
     return <>
       
       <h1> About 🐾</h1>
-        <img src="client/src/components/images/dog-and-cat.jpeg" alt="dog and cat" width="500" height="600">
+        <img src="./client/src/components/images/dog-and-cat.jpeg" alt="dog and cat" width="500" height="600">
         </img>
         <p>About Us
     We are organization establishing roots in the adoption community to help unite good people and our furry friends together:
