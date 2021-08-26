@@ -28,6 +28,10 @@ const NavBar = () => {
                         <li className="nav-item">
                             <a className="nav-link" href="/About">About</a>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/Cart">Cart</a>
+                        </li>
+
 
                     </ul>
                     <button type="button" class="btn btn-outline-primary"><a href ="/Login">Login</a></button>
