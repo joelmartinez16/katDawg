@@ -5,7 +5,7 @@ import React from 'react';
 const About  = () => {
     return <>
       
-      <h1>Kat Dawg 🐾</h1>
+      <h1> About 🐾</h1>
         <img src="client/src/components/images/dog-and-cat.jpeg" alt="dog and cat" width="500" height="600">
         </img>
         <p>About Us
