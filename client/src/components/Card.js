@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ border, header, index, secondary,setFeatured, featured, maxImgHeight, details, img, size = 40 }) => {
+const Card = ({ border, header, index, secondary,setFeatured, featured, setFeatured2, featured2,maxImgHeight, details, img, size = 40 }) => {
 
     return <>
     <div>

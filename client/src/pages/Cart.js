@@ -21,7 +21,7 @@ const cartPage = () => {
 
     <div>
         <h2>Summary</h2>
-        {/*<input>ENTER COUPON CODE</input>*/}
+        {/* <input>ENTER COUPON CODE</input> */}
         <h3>Subtotal</h3>
         <h3>Shipping</h3>
         <h3>Taxes</h3>

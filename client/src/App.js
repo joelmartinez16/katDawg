@@ -23,17 +23,63 @@ const client = new ApolloClient({
 const shopping = [
   {
     border: "primary",
-    header: "Husky",
-    size: 30
+    header: "Adoption Kit (Dog)",
+    img: "https://www.designityourselfgiftbaskets.com/media/images/product_detail/FAITHFULFRIEND.jpg",
+    details: {
+      age: 3,
+      breed: "corgie",
+      temperament: "mild" 
+    }
   },
   {
     border: "info",
-    header: "Puppy"
+    header: "Adoption Kit (Dog)",
+    img: "https://cdn.shopify.com/s/files/1/1487/0206/products/Pet_Lovers_Gift_2_1024x1024.jpg?v=1560552002",
+    details: {
+      age: 2,
+      breed: "cat",
+      temperament: "asshole" 
+    }
   },
   {
     border: "danger",
-    header: "Bulldog",
-    size: 12
+    header: "Adoption Kit (Dog)",
+    img: "https://2c9vb53m9fr03ltecf31gw8q-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/dog-lover-basket-intext.jpg",
+    details: {
+      age: "7 months",
+      breed: "furry rabbit",
+      temperament: "hyper" 
+    }
+  },
+  {
+    border: "primary",
+    header: "Adoption Kit (Cat)",
+    img: "https://www.cookiesbydesign.com/images/products/530/W500-Purrfect-Cats.jpg",
+    details: {
+      age: "2 months",
+      breed: "husky",
+      temperament: "playful" 
+    }
+  },
+  {
+    border: "info",
+    header: "Adoption Kit (Cat)",
+    img: "https://assets.eflorist.com/site/59081500/assets/products/PHR_/sku6580968.jpg",
+    details: {
+      age: 11,
+      breed: "persian",
+      temperament: "senile" 
+    }
+  },
+  {
+    border: "danger",
+    header: "Adoption Kit (Cat)",
+    img: "https://www.giftbasketbounty.com/files/1327644/uploaded/treats-cookies-cat-owner-gift-9.jpg",
+    details: {
+      age: 4,
+      breed: "black rabbit",
+      temperament: "chill" 
+    }
   },
 ]
 
@@ -107,9 +153,14 @@ function App() {
   
   const [text,setText]= useState("Hello World");
   const [featured,setFeatured]= useState(animals[0]);
+  const [featured2,setFeatured2]= useState(shopping[0]);
+
 
   const handleSetFeatured = (i) => {
     setFeatured(animals[i])
+  }
+  const handleSetFeatured2 = (i) => {
+    setFeatured2(shopping[i])
   }
 
   return (
@@ -122,7 +173,7 @@ function App() {
           <Route path="/Home" exact component={HomePage} />
           <Route path="/Signup" exact component={Signup} />
           <Route path="/Login" exact component={Login} />
-          <Route path="/Shop" exact component={()=> <ShopPage ShopItems={shopping}/>} />
+          <Route path="/Shop" exact component={()=> <ShopPage setFeatured2={handleSetFeatured2} featured2={featured2} ShopItems={shopping}/>} />
           <Route path="/AvailablePets" exact component={()=> <PetsPage setFeatured={handleSetFeatured} featured={featured} Animals={animals}/>} />
           <Route path="/Cart" exact component={Cart} />
           <Route path="/About" exact component={About} />
