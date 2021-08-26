@@ -35,17 +35,63 @@ const dummy = [
 const shopping = [
   {
     border: "primary",
-    header: "Adoption basket",
-    size: 30
+    header: "Puppy",
+    img: "https://hips.hearstapps.com/countryliving.cdnds.net/17/47/1511194376-cavachon-puppy-christmas.jpg",
+    details: {
+      age: 3,
+      breed: "corgie",
+      temperament: "mild" 
+    }
   },
   {
     border: "info",
-    header: "Adoption kit"
+    header: "Kitten",
+    img: "https://imageserver.petsbest.com/marketing/blog/fostering-kittens.jpg",
+    details: {
+      age: 2,
+      breed: "cat",
+      temperament: "asshole" 
+    }
   },
   {
     border: "danger",
-    header: "Ultimate Adoption kit",
-    size: 12
+    header: "Rabbit",
+    img: "https://static.wixstatic.com/media/nsplsh_45666a3048475064504b73~mv2_d_2560_1920_s_2.jpg/v1/fill/w_1000,h_750,al_c,q_90,usm_0.66_1.00_0.01/nsplsh_45666a3048475064504b73~mv2_d_2560_1920_s_2.jpg",
+    details: {
+      age: "7 months",
+      breed: "furry rabbit",
+      temperament: "hyper" 
+    }
+  },
+  {
+    border: "primary",
+    header: "Puppy2",
+    img: "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2021/05/25082143/Alaskan-Malamute-puppy-laying-down-outdoors.jpg",
+    details: {
+      age: "2 months",
+      breed: "husky",
+      temperament: "playful" 
+    }
+  },
+  {
+    border: "info",
+    header: "Kitten2",
+    img: "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+    details: {
+      age: 11,
+      breed: "persian",
+      temperament: "senile" 
+    }
+  },
+  {
+    border: "danger",
+    header: "Rabbit2",
+    img: "https://ichef.bbci.co.uk/news/976/cpsprodpb/295E/production/_100209501_istock-678095904.jpg",
+    details: {
+      age: 4,
+      breed: "black rabbit",
+      temperament: "chill" 
+    }
   },
 ]
 function App() {
@@ -55,6 +101,11 @@ function App() {
     });
   
   const [text,setText]= useState("Hello World");
+  const [featured,setFeatured]= useState(shopping[0]);
+
+  const handleSetFeatured = (i) => {
+    setFeatured(shopping[i])
+  }
 
   return (
     //provider for apolloclient for graphql
@@ -64,7 +115,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/Home" exact component={HomePage} />
-          <Route path="/shop" exact component={()=> <ShopPage shopItems={shopping}/>} />
+          <Route path="/shop" exact component={()=> <ShopPage setFeatured={handleSetFeatured} featured={featured} shopItems={shopping}/>} />
           <Route path="/availablePets" exact component={()=> <PetsPage AvailablePets={dummy}/>} />
         </Switch>
       </Router>
