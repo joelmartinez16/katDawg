@@ -17,7 +17,7 @@ const client = new ApolloClient({
   cache: InMemoryCache
 })
 
-const dummy = [
+const shopping = [
   {
     border: "primary",
     header: "Husky",
@@ -34,7 +34,7 @@ const dummy = [
   },
 ]
 
-const shopping = [
+const animals = [
   {
     border: "primary",
     header: "Puppy",
@@ -103,10 +103,10 @@ function App() {
     });
   
   const [text,setText]= useState("Hello World");
-  const [featured,setFeatured]= useState(shopping[0]);
+  const [featured,setFeatured]= useState(animals[0]);
 
   const handleSetFeatured = (i) => {
-    setFeatured(shopping[i])
+    setFeatured(animals[i])
   }
 
   return (
@@ -117,17 +117,12 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/Home" exact component={HomePage} />
-<<<<<<< HEAD
-          <Route path="/shop" exact component={()=> <ShopPage setFeatured={handleSetFeatured} featured={featured} shopItems={shopping}/>} />
-=======
           <Route path="/Signup" exact component={Signup} />
           <Route path="/Login" exact component={Login} />
-          <Route path="/shop" exact component={()=> <ShopPage shopItems={shopping}/>} />
->>>>>>> 8284a9205449d471a8207365a545601888540127
-          <Route path="/availablePets" exact component={()=> <PetsPage AvailablePets={dummy}/>} />
+          <Route path="/Shop" exact component={()=> <ShopPage ShopItems={shopping}/>} />
+          <Route path="/AvailablePets" exact component={()=> <PetsPage setFeatured={handleSetFeatured} featured={featured} Animals={animals}/>} />
         </Switch>
       </Router>
-     
     </ApolloProvider>
     <Footer/>
     </>
