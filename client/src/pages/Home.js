@@ -18,8 +18,6 @@ const Home = () => {
             We also sell pet essentials such as beds, food, and medication to help ease the transition of a
             new loving pet into your home. </p>
 
-
-      
     </>
 }
 export default Home;

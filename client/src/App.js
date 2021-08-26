@@ -5,8 +5,11 @@ import ShopPage from './pages/Shop';
 import PetsPage from "./pages/AvailablePets";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import Signup from './components/SignupForm'
-import Login from './pages/Login'
+import Signup from './components/SignupForm';
+import Login from './pages/Login';
+import Cart from './pages/Cart';
+import About from './pages/About';
+
 //import { Constructor } from '@babel/types';
 import {useState, useEffect} from 'react';
 import {getInfo} from './util/API';
@@ -119,8 +122,10 @@ function App() {
           <Route path="/Home" exact component={HomePage} />
           <Route path="/Signup" exact component={Signup} />
           <Route path="/Login" exact component={Login} />
-          <Route path="/shop" exact component={()=> <PetsPage AvailablePets={AvailablePets}/>} />
-          <Route path="/availablePets" exact component={()=> <ShopPage ShopItems={shopping}/>} />
+          <Route path="/AvailablePets" exact component={()=> <PetsPage AvailablePets={AvailablePets}/>} />
+          <Route path="/Shop " exact component={()=> <ShopPage ShopItems={shopping}/>} />
+          <Route path="/Cart" exact component={Cart} />
+          <Route path="/About" exact component={About} />
         </Switch>
       </Router>
      

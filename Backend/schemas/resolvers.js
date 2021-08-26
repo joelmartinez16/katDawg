@@ -4,6 +4,7 @@ const resolvers = {
   Query: {
     tech: async () => {
       return Tech.find({});
+      console.log(Tech)
     },
     matchups: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
