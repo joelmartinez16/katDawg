@@ -1,12 +1,12 @@
 import React from 'react';
-
+import AboutPage from "../assets/images/AboutPage.jpeg"
 
 
 const About  = () => {
     return <>
       
       <h1 class="homeH1"> About 🐾</h1>
-        <img src="" alt="" width="" height="">
+        <img src={AboutPage} alt="" className= "imgPet">
         </img>
         <p>About Us
     We are organization establishing roots in the adoption community to help unite good people and our furry friends together:
