@@ -1,5 +1,5 @@
 import React from 'react';
-
+import AboutPage from "../assets/images/AboutPage.jpeg"
 
 
 const About  = ({ border, header, index, secondary,setFeatured, featured, setFeatured2, featured2,maxImgHeight, details, img, size = 75}) => {
@@ -21,7 +21,9 @@ Partnering with the media to raise public awareness about adoption and encourage
 Developing training materials for adoption professionals 
 Promoting fairness and equality in the animal welfare field</p>
   </div>
-        <img src="" alt="" width="" height="">
+        
+      
+        <img src={AboutPage} alt="" className= "imgPet">
         </img>
         </div>
         </>
