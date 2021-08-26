@@ -124,8 +124,6 @@ function App() {
           <Route path="/Login" exact component={Login} />
           <Route path="/Shop" exact component={()=> <ShopPage ShopItems={shopping}/>} />
           <Route path="/AvailablePets" exact component={()=> <PetsPage setFeatured={handleSetFeatured} featured={featured} Animals={animals}/>} />
-          <Route path="/AvailablePets" exact component={()=> <PetsPage AvailablePets={AvailablePets}/>} />
-          <Route path="/Shop " exact component={()=> <ShopPage ShopItems={shopping}/>} />
           <Route path="/Cart" exact component={Cart} />
           <Route path="/About" exact component={About} />
         </Switch>
