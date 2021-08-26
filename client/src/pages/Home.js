@@ -1,11 +1,12 @@
 import React from 'react';
+import Sleeping from '../assets/images/Sleeping.jpeg'
 import '../App.css'
 
 const Home = () => {
     return <>
        
     <h1 class="homeH1">katDawg🐾  Pet Adoption</h1>
-       <img src="" alt="" ></img>
+       <img src= {Sleeping} alt="" width= "150px" height="150px"></img>
          
          <div class="container">
             <div class="center">
