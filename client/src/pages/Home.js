@@ -4,7 +4,7 @@ import '../App.css'
 const Home = () => {
     return <>
        
-    <h1 class="homeH1">Kat Dawg 🐾 Pet Adoption</h1>
+    <h1 class="homeH1">katDawg🐾  Pet Adoption</h1>
        <img src="" alt="" ></img>
          
          <div class="container">
