@@ -37,7 +37,7 @@ const shopping = [
   },
 ]
 
-const AvailablePets = [
+const animals = [
   {
     border: "primary",
     header: "Puppy",
@@ -106,10 +106,10 @@ function App() {
     });
   
   const [text,setText]= useState("Hello World");
-  const [featured,setFeatured]= useState(AvailablePets[0]);
+  const [featured,setFeatured]= useState(animals[0]);
 
   const handleSetFeatured = (i) => {
-    setFeatured(AvailablePets[i])
+    setFeatured(animals[i])
   }
 
   return (
@@ -122,13 +122,14 @@ function App() {
           <Route path="/Home" exact component={HomePage} />
           <Route path="/Signup" exact component={Signup} />
           <Route path="/Login" exact component={Login} />
+          <Route path="/Shop" exact component={()=> <ShopPage ShopItems={shopping}/>} />
+          <Route path="/AvailablePets" exact component={()=> <PetsPage setFeatured={handleSetFeatured} featured={featured} Animals={animals}/>} />
           <Route path="/AvailablePets" exact component={()=> <PetsPage AvailablePets={AvailablePets}/>} />
           <Route path="/Shop " exact component={()=> <ShopPage ShopItems={shopping}/>} />
           <Route path="/Cart" exact component={Cart} />
           <Route path="/About" exact component={About} />
         </Switch>
       </Router>
-     
     </ApolloProvider>
     <Footer/>
     </>

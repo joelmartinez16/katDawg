@@ -99,3 +99,41 @@
   position: absolute;
 
 } */
+
+/* homepage */
+.homeH1{
+  text-align: center;
+  padding: 32px;
+}
+
+.imgPet{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.container { 
+  height: 100px;
+  position: relative;
+  border-style: none;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.homeH2{
+  text-align: center;
+}
+
+.statement{
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
