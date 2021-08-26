@@ -60,8 +60,19 @@ exports.signin = (req,res) =>{
 
             if(user.authenticate(req.body.password)){ 
                
-                const token = jwt.sign({_id: user._id},process.env.JWT_SECRET,{expiresIn:'2hr'})
+                const token = jwt.sign({_id: user._id},process.env.JWT_SECRET,{expiresIn:'2hr'}); 
+                const {_id,firstName,lastName,username,email,role,fullName} = user; 
+                res.status(200).json({ 
+                    token, 
+                    user:{ 
+                        _id,firstName,lastName,username,email,role,fullName
+                    }
+                });
 
+            }else { 
+                return res.status(400).json({ 
+                    message:'Invalid Password'
+                })
             }
         
         }else{ 
@@ -71,7 +82,17 @@ exports.signin = (req,res) =>{
         }
 
 
-    })
+    });
+} 
+
+exports.requireSignin = (req,res,next) =>{ 
+    const token = req.headers.authorization.split("")[1]; 
+    console.log(token); 
+    const user = jwt.verify(token,process.JWT_SECRET); 
+    console.log(user);
+    req.user = user;
+    next();
+    // jwt.decode()
 }
 
  
