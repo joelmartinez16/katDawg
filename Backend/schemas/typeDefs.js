@@ -1,9 +1,10 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Tech {
+  type User {
     _id: ID!
     name: String!
+    email: String!
   }
 
   type Matchup {
