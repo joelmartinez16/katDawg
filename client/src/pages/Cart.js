@@ -12,7 +12,7 @@ const cartPage = () => {
     </tr>
     
     <h1>Shopping Cart</h1>
-        <img src></img>
+        <img src="" alt=""></img>
         <h2>PRODUCT NAME</h2>
             <div>
                 <button type="button" class="btn btn-dark disabled">Dark</button>
@@ -21,7 +21,7 @@ const cartPage = () => {
 
     <div>
         <h2>Summary</h2>
-        <input>ENTER COUPON CODE</input>
+        {/* <input>ENTER COUPON CODE</input> */}
         <h3>Subtotal</h3>
         <h3>Shipping</h3>
         <h3>Taxes</h3>

@@ -1,18 +1,5 @@
 import Card from '../components/Card'
 
-<<<<<<< HEAD
-const Pets = ({ AvailablePets }) => {
-  //this is the shop page
-  return (
-    <div>
-     <h1>Available Adoptees 🐾 </h1> 
-      <ShopNav categories={categories} />
-      <div className="card-grid grid--4 grid__item grid-container">
-        {AvailablePets.map((data) => (
-          <Card {...data} />
-        ))}
-      </div>
-=======
 const Pets = ({ Animals, featured, setFeatured }) => {
     //this is the shop page
     return <div className="mb-5 p-3">
@@ -28,7 +15,6 @@ const Pets = ({ Animals, featured, setFeatured }) => {
             </div>
         </div>
         {/* {shopItems.map((data) => <Card {...data} />)} */}
->>>>>>> e604e7673065321c75b26511035d6855de04d0d9
     </div>
 }
 
