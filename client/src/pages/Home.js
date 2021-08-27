@@ -1,5 +1,5 @@
 import React from 'react';
-import Sleeping from '../assets/images/Sleeping.jpeg'
+// import Sleeping from '../assets/images/Sleeping.jpeg'
 import '../App.css'
 
 const Home = () => {
@@ -8,7 +8,6 @@ const Home = () => {
     <h1 class="homeH1">Kat Dawg 🐾 Pet Adoption</h1>
        <img src="images/dog-and-cat.jpeg" alt="" class="imgPet"></img>
          
-    <h1 class="homeH1">katDawg🐾  Pet Adoption</h1>
            <div class="container">
             <div class="center">
             <button type="button" class="btn btn-primary">
@@ -20,7 +19,7 @@ const Home = () => {
         <p class="statement">We provide an easy website for people looking to add a new pet into their family.
             We also sell pet essentials such as beds, food, and medication to help ease the transition of a
             new loving pet into your home. </p>
-      <img src= {Sleeping} alt=""  className= "imgPet"></img>
+      {/* <img src= {Sleeping} alt=""  className= "imgPet"></img> */}
            
     </>
 }
