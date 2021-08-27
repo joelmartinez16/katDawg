@@ -5,7 +5,7 @@ const Home = () => {
     return <>
        
     <h1 class="homeH1">Kat Dawg 🐾 Pet Adoption</h1>
-       <img src="../client/public/images/dog-and-cat.jpeg" alt="dog and cat" class="imgPet"></img>
+       <img src="images/dog-and-cat.jpeg" alt="" class="imgPet"></img>
          
          <div class="container">
             <div class="center">

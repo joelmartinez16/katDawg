@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css'
 
-const item = () => {
+const Item = () => {
     return <>
 
 <div class="modal">
@@ -14,7 +14,7 @@ const item = () => {
         </button>
       </div>
       <div class="modal-body">
-        <img></img>
+        <img src="/images/PetBox.jpeg" alt=""/>
             <p>A box full of pet essentials for first time adoptees, includes a bed, pet food, toys, and much more.</p>
       </div>
       <div class="modal-footer">
@@ -36,7 +36,7 @@ const item = () => {
         </button>
       </div>
       <div class="modal-body">
-        <img></img>
+        <img src="/images/DogBed.jpeg" alt=""/>
             <p>A plush dog bed</p>
       </div>
       <div class="modal-footer">
@@ -58,7 +58,7 @@ const item = () => {
         </button>
       </div>
       <div class="modal-body">
-        <img></img>
+        <img src="/images/DogFood.png" alt=""/>
             <p>Adult Dog Food 3 Flavors, 4 Pouches each</p>
       </div>
       <div class="modal-footer">
@@ -73,4 +73,4 @@ const item = () => {
 
 </>
 }
-export default item;
+export default Item
