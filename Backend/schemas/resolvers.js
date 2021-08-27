@@ -1,35 +1,38 @@
-const { Tech, Matchup } = require('../models');
+const { AuthenticationError } = require('apollo-server-express')
+const { User, Index, Adoption, Products  } = require('../models');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-      console.log(Tech)
-    },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+    me: async (parent, args, context) => { 
+      if (context.user) {
+          return await User.findOne({_id: context.user._id}).populate('itineraries');
+      }
+      throw new AuthenticationError('You need to be logged in!');
   },
+},
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    
+    login: async (parent, {email, password}) => { 
+        const user = await User.findOne({email});
+        if (!user) {
+            throw new AuthenticationError('No user found with this email!');
+        }
+        const correctPW = await user.isCorrectPassword(password);
+
+        if (!correctPW) {
+            throw new AuthenticationError('Incorrect credentials!');
+        }
+
+        const token = signToken(user);
+        return { token, user };
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
+    
+    addUser: async (parent, {username, email, password}) => { 
+        const user = await User.create({ username, email, password });
+        const token = signToken(user);
+        return { token, user };
     },
-    addUser: async (parent, {username, email, password}) => {
-      //do db stuff
-      console.log(username, email, password)
-      //once good return user obj
-    }
-  },
-};
+}
+}
 
 module.exports = resolvers;
