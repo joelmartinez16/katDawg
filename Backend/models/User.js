@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({ 
 
+  
+
   firstName:{ 
     type: String, 
     required: true , 
@@ -47,18 +49,34 @@ const userSchema = new Schema({
     default:"user"
   }, 
 
-  contactNumber:{ 
+  Signup:{ 
     type:String
   }, 
 
-  profilePicture:{ 
+  Home:{ 
     type:String
   },
-  zipCode:{
+  Login:{
     type:String
-  }
- 
+  },
 
+  Shop:{
+  type:String
+},
+AvailablePets:{
+  type:String
+},
+Cart:{
+  type:String
+},
+About:{
+  type:String
+},
+Checkout_sessions:{
+  type:String
+}
+ 
+  
 
 
 

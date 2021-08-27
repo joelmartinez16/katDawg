@@ -9,7 +9,7 @@ import Signup from './components/SignupForm';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
 import About from './pages/About';
-
+import Checkout_sessions from './pages/api/Checkout_sessions';
 
 
 
@@ -178,8 +178,9 @@ function App() {
           <Route path="/Login" exact component={Login} />
           <Route path="/Shop" exact component={()=> <ShopPage setFeatured2={handleSetFeatured2} featured2={featured2} ShopItems={shopping}/>} />
           <Route path="/AvailablePets" exact component={()=> <PetsPage setFeatured={handleSetFeatured} featured={featured} Animals={animals}/>} />
-          <Route path="/Cart" exact component={Cart} />
+          <Route path="/Cart" exact component={Cart  } />
           <Route path="/About" exact component={About} />
+          <Route path="/Checkout_sessions" exact component={Checkout_sessions} />
         </Switch>
       </Router>
     </ApolloProvider>
