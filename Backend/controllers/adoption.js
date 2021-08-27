@@ -1,3 +1,6 @@
+//connecting the controller to the routes and models.
+//This will allow the backend of the adoption list to run properly.
+
 const adoptionList = require("../models/Adoption")
 
 const getAllPets = async(req,res) => {
