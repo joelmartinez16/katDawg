@@ -9,12 +9,14 @@ const bodyParser = require("body-parser");
 
 //Setting up the routes 
 const userRoutes = require('./routes/api/user-routes');
-
+const productRoutes = require('./routes/api/product-routes');
 //Setting up constant for the server  
 
 app.use(express.json());
 
-app.use('/api',userRoutes); 
+app.use('/api',userRoutes);   
+app.use('/api',productRoutes);
+
 
 
 
