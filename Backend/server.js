@@ -10,6 +10,8 @@ const server = new ApolloServer({
   resolvers
 });
 
+server.applyMiddleware({app});
+
 /*const { ApolloServer } = require('apollo-server-express');*/
 const { typeDefs, resolvers, index } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
