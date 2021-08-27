@@ -15,10 +15,6 @@ const typeDefs = gql`
     tech2_votes: Int
   }
 
-  type User {
-    username: String!
-    email: String!
-  }
 
   type Query {
     tech: [Tech]
