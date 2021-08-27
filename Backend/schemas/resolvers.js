@@ -5,7 +5,7 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => { 
       if (context.user) {
-          return await User.findOne({_id: context.user._id}).populate('itineraries');
+          return await User.findOne({_id: context.user._id});
       }
       throw new AuthenticationError('You need to be logged in!');
   },
@@ -23,8 +23,7 @@ const resolvers = {
             throw new AuthenticationError('Incorrect credentials!');
         }
 
-        const token = signToken(user);
-        return { token, user };
+       
     },
     
     addUser: async (parent, {username, email, password}) => { 
