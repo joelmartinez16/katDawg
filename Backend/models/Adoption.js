@@ -15,6 +15,11 @@ const adoptionSchema = new Schema({
     type: Number,
     required: true,
     unique: false
+  },
+  id: {
+    type: Number,
+    required: true,
+    unique: true
   }
 });
 
