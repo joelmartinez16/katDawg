@@ -1,4 +1,6 @@
-const Card = ({ border, header, index, secondary,setFeatured, featured, maxImgHeight, details, img, size = 40 }) => {
+import React from 'react';
+
+const Card = ({ border, header, index, secondary,setFeatured, featured, setFeatured2, featured2,maxImgHeight, details, img, size = 40 }) => {
 
     return <>
     <div>
@@ -10,8 +12,7 @@ const Card = ({ border, header, index, secondary,setFeatured, featured, maxImgHe
                 <div className="card-body">
                     <h4 className="card-title">Primary card title</h4>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    {featured &&
-                         <>
+                    {featured &&<>
                         <p>Age - {details.age}</p>
                         <p>Breed - {details.breed}</p>
                         <p>temperament - {details.temperament}</p>

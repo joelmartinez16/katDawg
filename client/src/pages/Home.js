@@ -1,4 +1,5 @@
 import React from 'react';
+import Sleeping from '../assets/images/Sleeping.jpeg'
 import '../App.css'
 
 const Home = () => {
@@ -7,9 +8,11 @@ const Home = () => {
     <h1 class="homeH1">Kat Dawg 🐾 Pet Adoption</h1>
        <img src="images/dog-and-cat.jpeg" alt="" class="imgPet"></img>
          
-         <div class="container">
+    <h1 class="homeH1">katDawg🐾  Pet Adoption</h1>
+           <div class="container">
             <div class="center">
-              <button type="button" className="btn btn-secondary">Adopt Now</button>
+            <button type="button" class="btn btn-primary">
+            <a className="nav-link active" href="/AvailablePets">Adopt Now</a></button>
             </div>
           </div>
 
@@ -17,7 +20,8 @@ const Home = () => {
         <p class="statement">We provide an easy website for people looking to add a new pet into their family.
             We also sell pet essentials such as beds, food, and medication to help ease the transition of a
             new loving pet into your home. </p>
-
+      <img src= {Sleeping} alt=""  className= "imgPet"></img>
+           
     </>
 }
 export default Home;

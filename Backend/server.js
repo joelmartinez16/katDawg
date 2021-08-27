@@ -1,11 +1,14 @@
 //Setting up the server 
 const express = require('express');
-require("dotenv").config()
-const connectionDB = require('./config/connection') 
-connectionDB();
+require("dotenv").config();
+const connectionDB = require('./config/connection') ;
 const app = express();
 const PORT = process.env.PORT || 3001;  
 const bodyParser = require("body-parser"); 
+const { ApolloServer } = require('apollo-server-express');
+const { typeDefs, resolvers, index } = require('./schemas');
+const { authMiddleware } = require('./utils/auth');
+
 
 //Setting up the routes 
 const userRoutes = require('./routes/api/user-routes');
@@ -24,3 +27,4 @@ app.use('/api',userRoutes);
     // console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 
+  

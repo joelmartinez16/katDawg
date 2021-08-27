@@ -1,7 +1,14 @@
 const User = require('../models/User'); 
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken'); 
+// const {check,validationResult} = require('express-validator') 
 
-exports.signup = (res, req) =>{ 
+
+exports.signup = (req, res) =>{  
+    // console.log(res.status);
+    
+    // const err = validationResult(req); 
+    // return res.status(400).json({err:err.array() }),
+    
 
     User.findOne({email:req.body.email}) 
  .exec((err,user) =>{ 
@@ -86,9 +93,10 @@ exports.signin = (req,res) =>{
 } 
 
 exports.requireSignin = (req,res,next) =>{ 
-    const token = req.headers.authorization.split("")[1]; 
+    const token = req.headers.authorization.split("")[1];  
+    console.log(split);
     console.log(token); 
-    const user = jwt.verify(token,process.JWT_SECRET); 
+    const user = jwt.verify(token,process.env.JWT_SECRET); 
     console.log(user);
     req.user = user;
     next();

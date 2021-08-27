@@ -84,12 +84,20 @@
   position: "absolute";
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 0rem;
+  padding:"auto";
           
 }
 
 .content-wrap {
   padding-bottom: 2.5rem;
+}
+
+.aboutH1{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
 }
 
 /* .footer-color{
@@ -111,6 +119,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  height: 50%;
 }
 
 .container { 

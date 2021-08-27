@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");  
+const { Schema,Model} = require("mongoose");  
 const bcrypt = require("bcrypt");
 
-const userSchema = new mongoose.Schema({ 
+const userSchema = new Schema({ 
 
   firstName:{ 
     type: String, 
@@ -32,7 +32,8 @@ const userSchema = new mongoose.Schema({
     type:String, 
     required:true, 
     trim:true , 
-    unique:true 
+    unique:true,
+    match: [/.+@.+\..+/, 'Must use a valid email address'], 
   }, 
 
   hash_password:{ 
