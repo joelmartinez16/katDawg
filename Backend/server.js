@@ -1,5 +1,8 @@
 //Setting up the server 
+const { ApolloServer } = require('apollo-server-express');
 const express = require('express');
+const userRoutes = require('./routes/api/user-routes');
+const { typeDefs, resolvers, index } = require('./schemas');
 //require("dotenv").config();
 const db = require('./config/connection'); 
 const app = express();
@@ -22,13 +25,13 @@ db.once('open', () => {
   });
 });
 
-/*const { ApolloServer } = require('apollo-server-express');*/
-//const { typeDefs, resolvers, index } = require('./schemas');
+
+
 //const { authMiddleware } = require('./utils/auth');
 
 
 //Setting up the routes 
-const userRoutes = require('./routes/api/user-routes');
+
 //const productRoutes = require('./routes/api/product-routes');
 //const { ApolloServer } = require('apollo-server-express');
 //Setting up constant for the server  
