@@ -1,11 +1,16 @@
 //Setting up the server 
 const express = require('express');
-require("dotenv").config();
-const connectionDB = require('./config/connection') ;
+//require("dotenv").config();
+const db = require('./config/connection'); 
 const app = express();
 const PORT = process.env.PORT || 3001;  
 const bodyParser = require("body-parser"); 
-const { ApolloServer } = require('apollo-server-express');
+const server = new ApolloServer({
+  typeDef,
+  resolvers
+});
+
+/*const { ApolloServer } = require('apollo-server-express');*/
 const { typeDefs, resolvers, index } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 
@@ -13,6 +18,7 @@ const { authMiddleware } = require('./utils/auth');
 //Setting up the routes 
 const userRoutes = require('./routes/api/user-routes');
 const productRoutes = require('./routes/api/product-routes');
+//const { ApolloServer } = require('apollo-server-express');
 //Setting up constant for the server  
 
 app.use(express.json());
