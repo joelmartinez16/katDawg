@@ -14,7 +14,7 @@ const server = new ApolloServer({
 });
 
 server.applyMiddleware({app});
-//added this to access the db , express , json , graph ql , bitch i do dis mofuckazzzz
+
 app.use(express.urlencoded({ extended: false }));
 //app.use(express.json());
 
