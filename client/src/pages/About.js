@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutPage from "../assets/images/AboutPage.jpeg"
+import AboutPage from "../assets/images/About.jpeg"
 
 
 const About  = ({ border, header, index, secondary,setFeatured, featured, setFeatured2, featured2,maxImgHeight, details, img, size = 75}) => {
