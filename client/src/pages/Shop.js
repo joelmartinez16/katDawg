@@ -1,21 +1,21 @@
 import Card from "../components/Card";
 // import Footer from '../components/Footer';
-import ShopNav from "../components/ShopNav";
-const categories = [
-  'All',
-  'Featured',
-  'Adoption Gear',
-  'Bundles',
-  'Pet Food',
-  'Collars',
-  'KatDawg Merch'
-]
+// import ShopNav from "../components/ShopNav";
+// const categories = [
+//   'All',
+//   'Featured',
+//   'Adoption Gear',
+//   'Bundles',
+//   'Pet Food',
+//   'Collars',
+//   'KatDawg Merch'
+// ]
 
 const Shop = ({ ShopItems, featured2, setFeatured2 }) => {
   //this is the shop page
   return (
     <div>
-       <ShopNav categories={categories} />
+       {/* <ShopNav categories={categories} /> */}
     <div className="mb-5 p-3">
       <h1>Shop</h1>
       <div className="row" style={{ width: "95%", margin: "auto" }}>
