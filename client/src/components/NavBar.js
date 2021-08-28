@@ -1,6 +1,6 @@
 // import { Link } from 'react-router-dom';
 import React from 'react';
-// import Checkout_sessions from './client/pages/api/Checkout_sessions';
+//import Checkout_sessions from './client/pages/api/Checkout_sessions';
 
 
 
@@ -33,9 +33,7 @@ const NavBar = () => {
                         <li className="nav-item">
                             <a className="nav-link" href="/Cart">Cart</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/Checkout_sessions">Checkout_sessions</a>
-                        </li>
+                       
 
 
                     </ul>
