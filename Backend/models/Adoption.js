@@ -6,6 +6,18 @@ const adoptionSchema = new Schema({
     required: true,
     unique: true,
   },*/
+  //Added an ID for the pet identification
+  //Also added type(dog/cat), so we can divide the pets that way.
+  id: {
+    type: Number,
+    required: true,
+    unique: true
+  },
+  type: {
+    type: String,
+    require: true,
+    unique: false
+  },
   breed: {
     type: String,
     required: true,
@@ -15,7 +27,8 @@ const adoptionSchema = new Schema({
     type: Number,
     required: true,
     unique: false
-  }
+  },
+  
 });
 
 /*const adoptionList =[
